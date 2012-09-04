@@ -45,6 +45,7 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -86,11 +87,11 @@ When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
 end
 
-When /^(?:|I )check "([^"]*)"$/ do |field|
+When /^(?:|I )check ["']([^"]*)["']$/ do |field|
   check(field)
 end
 
-When /^(?:|I )uncheck "([^"]*)"$/ do |field|
+When /^(?:|I )uncheck ["']([^"]*)["']/ do |field|
   uncheck(field)
 end
 
